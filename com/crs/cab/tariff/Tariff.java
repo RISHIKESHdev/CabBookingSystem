@@ -1,18 +1,16 @@
-package com.crs.journey;
+package com.crs.cab.tariff;
 
 import com.crs.cab.Cab;
 
 import java.time.LocalDateTime;
 
-public class RentTariff {
+public abstract class Tariff {
     private Cab cab;
-    private double farePerHour;
     private LocalDateTime effectiveStartDateTime;
     private LocalDateTime effectiveEndDateTime;
 
-    public RentTariff(Cab cab, double farePerHour, LocalDateTime effectiveStartDateTime, LocalDateTime effectiveEndDateTime) {
+    public Tariff(Cab cab, LocalDateTime effectiveStartDateTime, LocalDateTime effectiveEndDateTime) {
         this.cab = cab;
-        this.farePerHour = farePerHour;
         this.effectiveStartDateTime = effectiveStartDateTime;
         this.effectiveEndDateTime = effectiveEndDateTime;
     }
@@ -23,14 +21,6 @@ public class RentTariff {
 
     public void setCab(Cab cab) {
         this.cab = cab;
-    }
-
-    public double getFarePerHour() {
-        return farePerHour;
-    }
-
-    public void setFarePerHour(double farePerHour) {
-        this.farePerHour = farePerHour;
     }
 
     public LocalDateTime getEffectiveStartDateTime() {
