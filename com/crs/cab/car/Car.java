@@ -13,6 +13,15 @@ public abstract class Car {
     private String licensePlateNumber;
     private List<Aminity> aminityList;
 
+    public Car(String manufacturerName, String model, LocalDateTime manufactureDateTime, double mileage, String licensePlateNumber, List<Aminity> aminityList) {
+        this.manufacturerName = manufacturerName;
+        this.model = model;
+        this.manufactureDateTime = manufactureDateTime;
+        this.mileage = mileage;
+        this.licensePlateNumber = licensePlateNumber;
+        this.aminityList = aminityList;
+    }
+
     public abstract int getTotalPassengerSeatingCapacity();
 
     public abstract void setTotalPassengerSeatingCapacity(int totalPassengerSeatingCapacity);
