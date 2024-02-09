@@ -1,13 +1,8 @@
 package com.crs.cab.car;
 
 import com.crs.cab.PrimeCab;
-import com.crs.cab.aminities.Aminity;
-import com.crs.people.driver.Driver;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
-public class PrimeCabSUV extends Car implements PrimeCab {
+public class PrimeSedan extends Car implements PrimeCab {
     private int totalPassengerSeatingCapacity;
 
     public int getTotalPassengerSeatingCapacity() {
