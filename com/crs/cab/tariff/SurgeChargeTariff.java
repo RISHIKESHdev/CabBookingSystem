@@ -7,12 +7,12 @@ import java.time.LocalTime;
 
 public class SurgeChargeTariff extends Tariff{
     private double surgeChargePrice;
-    private LocalTime waitTime;
+    private double pickupDistance;
 
-    public SurgeChargeTariff(Cab cab, LocalDateTime effectiveStartDateTime, LocalDateTime effectiveEndDateTime, double surgeChargePrice, LocalTime waitTime) {
+    public SurgeChargeTariff(Cab cab, LocalDateTime effectiveStartDateTime, LocalDateTime effectiveEndDateTime, double surgeChargePrice, double pickupDistance) {
         super(cab, effectiveStartDateTime, effectiveEndDateTime);
         this.surgeChargePrice = surgeChargePrice;
-        this.waitTime = waitTime;
+        this.pickupDistance = pickupDistance;
     }
 
     public double getSurgeChargePrice() {
@@ -23,11 +23,11 @@ public class SurgeChargeTariff extends Tariff{
         this.surgeChargePrice = surgeChargePrice;
     }
 
-    public LocalTime getWaitTime() {
-        return waitTime;
+    public double getWaitTime() {
+        return pickupDistance;
     }
 
-    public void setWaitTime(LocalTime waitTime) {
-        this.waitTime = waitTime;
+    public void setWaitTime(double pickupDistance) {
+        this.pickupDistance = pickupDistance;
     }
 }
